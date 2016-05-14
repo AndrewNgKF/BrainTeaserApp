@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--LoginVC-->
@@ -18,39 +19,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain" translatesAutoresizingMaskIntoConstraints="NO" id="d7p-tD-c4Y">
-                                <rect key="frame" x="199" y="36" width="203" height="195"/>
+                                <rect key="frame" x="199" y="50" width="203" height="195"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="195" id="dj0-7D-Alq"/>
                                     <constraint firstAttribute="width" constant="203" id="sfN-DN-fcR"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Cm-x8-GXl">
-                                <rect key="frame" x="160" y="276" width="281" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Cm-x8-GXl" customClass="CustomTextField" customModule="BrainTeaserApp" customModuleProvider="target">
+                                <rect key="frame" x="160" y="290" width="281" height="40"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Uwu-6q-Ere"/>
+                                    <constraint firstAttribute="height" constant="40" id="Uwu-6q-Ere"/>
                                     <constraint firstAttribute="width" constant="281" id="ZOl-Vy-I8D"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tb9-rX-5KK">
-                                <rect key="frame" x="160" y="341" width="281" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tb9-rX-5KK" customClass="CustomTextField" customModule="BrainTeaserApp" customModuleProvider="target">
+                                <rect key="frame" x="160" y="355" width="281" height="40"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="281" id="LZc-57-L2p"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="P1m-38-MpM"/>
                                     <constraint firstAttribute="width" constant="281" id="la7-ZA-Jbz"/>
-                                    <constraint firstAttribute="height" constant="30" id="vuJ-QK-bX9"/>
+                                    <constraint firstAttribute="height" constant="40" id="vuJ-QK-bX9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veU-bd-H1x">
-                                <rect key="frame" x="231" y="406" width="139" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veU-bd-H1x" customClass="CustomButton" customModule="BrainTeaserApp" customModuleProvider="target">
+                                <rect key="frame" x="231" y="430" width="139" height="49"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.5725490196078431" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="FST-S3-ELp"/>
                                     <constraint firstAttribute="width" constant="139" id="v40-Va-PCR"/>
                                 </constraints>
                                 <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="0.98521870286576163" green="0.97977979836376228" blue="0.9367726141960232" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rtQ-bG-Oce" kind="show" id="las-Fy-0ih"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -59,16 +84,106 @@
                             <constraint firstItem="veU-bd-H1x" firstAttribute="top" secondItem="Tb9-rX-5KK" secondAttribute="bottom" constant="35" id="6rb-CC-s4y"/>
                             <constraint firstItem="8Cm-x8-GXl" firstAttribute="top" secondItem="d7p-tD-c4Y" secondAttribute="bottom" constant="45" id="IDs-8Y-jhu"/>
                             <constraint firstItem="veU-bd-H1x" firstAttribute="centerX" secondItem="Tb9-rX-5KK" secondAttribute="centerX" id="XdY-KQ-paa"/>
-                            <constraint firstItem="Tb9-rX-5KK" firstAttribute="top" secondItem="8Cm-x8-GXl" secondAttribute="bottom" constant="35" id="aAF-eJ-9Nn"/>
+                            <constraint firstItem="Tb9-rX-5KK" firstAttribute="top" secondItem="8Cm-x8-GXl" secondAttribute="bottom" constant="25" id="aAF-eJ-9Nn"/>
                             <constraint firstItem="Tb9-rX-5KK" firstAttribute="centerX" secondItem="8Cm-x8-GXl" secondAttribute="centerX" id="e6V-mT-20z"/>
                             <constraint firstItem="8Cm-x8-GXl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h0x-uh-UL7"/>
-                            <constraint firstItem="d7p-tD-c4Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="i9M-Ll-okV"/>
+                            <constraint firstItem="d7p-tD-c4Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="i9M-Ll-okV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailConstraint" destination="h0x-uh-UL7" id="uH8-Co-H6N"/>
+                        <outlet property="loginConstraint" destination="XdY-KQ-paa" id="6ev-nZ-HGd"/>
+                        <outlet property="passwordConstraint" destination="e6V-mT-20z" id="5eg-CI-h1e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+        <!--GameVC-->
+        <scene sceneID="yIo-pu-VTe">
+            <objects>
+                <viewController id="rtQ-bG-Oce" customClass="GameVC" customModule="BrainTeaserApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="410-KE-3qH"/>
+                        <viewControllerLayoutGuide type="bottom" id="vUH-Zp-qIm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pNt-uZ-SLX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2L5-eo-bz3" customClass="CustomButton" customModule="BrainTeaserApp" customModuleProvider="target">
+                                <rect key="frame" x="441" y="531" width="139" height="49"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="QDt-Up-jKz"/>
+                                    <constraint firstAttribute="height" constant="49" id="Wjv-7K-b0h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.9288084464555052" green="0.9236809550404238" blue="0.88313621528155395" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="0.98521870290000002" green="0.97977979839999996" blue="0.93677261420000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="noPressed:" destination="rtQ-bG-Oce" eventType="touchUpInside" id="Y7O-L0-WIw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Remember this image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoX-Ga-F7P">
+                                <rect key="frame" x="145" y="50" width="310" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5p-C6-tr6" customClass="CustomButton" customModule="BrainTeaserApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="531" width="139" height="49"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="acP-dQ-GNv"/>
+                                    <constraint firstAttribute="height" constant="49" id="sPs-LS-hFH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" red="0.96644861969362506" green="0.98009049773755652" blue="0.96985908920460795" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="0.98521870290000002" green="0.97977979839999996" blue="0.93677261420000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="noPressed:" destination="rtQ-bG-Oce" eventType="touchUpInside" id="Fya-bm-aLK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VoX-Ga-F7P" firstAttribute="centerX" secondItem="pNt-uZ-SLX" secondAttribute="centerX" id="1gx-zm-Yxh"/>
+                            <constraint firstItem="vUH-Zp-qIm" firstAttribute="top" secondItem="2L5-eo-bz3" secondAttribute="bottom" constant="20" id="Lcr-6T-vsu"/>
+                            <constraint firstItem="y5p-C6-tr6" firstAttribute="leading" secondItem="pNt-uZ-SLX" secondAttribute="leadingMargin" id="Nep-az-mIl"/>
+                            <constraint firstItem="vUH-Zp-qIm" firstAttribute="top" secondItem="y5p-C6-tr6" secondAttribute="bottom" constant="20" id="Z9o-FH-ZUk"/>
+                            <constraint firstItem="VoX-Ga-F7P" firstAttribute="top" secondItem="410-KE-3qH" secondAttribute="bottom" constant="30" id="fEp-gc-Y3n"/>
+                            <constraint firstItem="2L5-eo-bz3" firstAttribute="trailing" secondItem="pNt-uZ-SLX" secondAttribute="trailingMargin" id="pXz-Bt-0uS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noBtn" destination="y5p-C6-tr6" id="dY1-a0-QGP"/>
+                        <outlet property="titleLbl" destination="VoX-Ga-F7P" id="xKH-mg-EqB"/>
+                        <outlet property="yesBtn" destination="2L5-eo-bz3" id="O0T-we-4YQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btI-kf-2vK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="429"/>
         </scene>
     </scenes>
     <resources>

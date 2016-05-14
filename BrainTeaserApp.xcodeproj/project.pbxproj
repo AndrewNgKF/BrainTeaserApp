@@ -12,6 +12,12 @@
 		6F260ECC1CE5CBA600F9AC6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F260ECA1CE5CBA600F9AC6B /* Main.storyboard */; };
 		6F260ECE1CE5CBA600F9AC6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F260ECD1CE5CBA600F9AC6B /* Assets.xcassets */; };
 		6F260ED11CE5CBA600F9AC6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F260ECF1CE5CBA600F9AC6B /* LaunchScreen.storyboard */; };
+		6F7AE9891CE621E300C9E6DB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7AE9881CE621E300C9E6DB /* CustomTextField.swift */; };
+		6F7AE98B1CE630E900C9E6DB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7AE98A1CE630E900C9E6DB /* CustomButton.swift */; };
+		6F7AE98E1CE64B0800C9E6DB /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7AE98D1CE64B0800C9E6DB /* AnimationEngine.swift */; };
+		6F7AE9901CE6F08200C9E6DB /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7AE98F1CE6F08200C9E6DB /* GameVC.swift */; };
+		6F7AE9921CE6F20400C9E6DB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7AE9911CE6F20400C9E6DB /* Card.swift */; };
+		6F7AE9941CE6F21500C9E6DB /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F7AE9931CE6F21500C9E6DB /* Card.xib */; };
 		B58991C1D2ADDD76BB1557E3 /* Pods_BrainTeaserApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEB300A2743903A49B54634 /* Pods_BrainTeaserApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +31,12 @@
 		6F260ED01CE5CBA600F9AC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F260ED21CE5CBA600F9AC6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F7AE9801CE618F900C9E6DB /* BrainTeaserApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BrainTeaserApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		6F7AE9881CE621E300C9E6DB /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		6F7AE98A1CE630E900C9E6DB /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		6F7AE98D1CE64B0800C9E6DB /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
+		6F7AE98F1CE6F08200C9E6DB /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		6F7AE9911CE6F20400C9E6DB /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		6F7AE9931CE6F21500C9E6DB /* Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
 		BA1888C3E45D497B722534C9 /* Pods-BrainTeaserApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainTeaserApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainTeaserApp/Pods-BrainTeaserApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BC8C0C5A584F27C265830 /* Pods-BrainTeaserApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainTeaserApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrainTeaserApp/Pods-BrainTeaserApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,8 +83,10 @@
 		6F260EC51CE5CBA600F9AC6B /* BrainTeaserApp */ = {
 			isa = PBXGroup;
 			children = (
+				6F7AE98C1CE64AFE00C9E6DB /* Util */,
+				6F7AE9871CE621C700C9E6DB /* Controller */,
+				6F7AE9861CE621C100C9E6DB /* View */,
 				6F260EC61CE5CBA600F9AC6B /* AppDelegate.swift */,
-				6F260EC81CE5CBA600F9AC6B /* LoginVC.swift */,
 				6F260ECA1CE5CBA600F9AC6B /* Main.storyboard */,
 				6F260ECD1CE5CBA600F9AC6B /* Assets.xcassets */,
 				6F260ECF1CE5CBA600F9AC6B /* LaunchScreen.storyboard */,
@@ -80,6 +94,34 @@
 				6F7AE9801CE618F900C9E6DB /* BrainTeaserApp-Bridging-Header.h */,
 			);
 			path = BrainTeaserApp;
+			sourceTree = "<group>";
+		};
+		6F7AE9861CE621C100C9E6DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6F7AE9881CE621E300C9E6DB /* CustomTextField.swift */,
+				6F7AE98A1CE630E900C9E6DB /* CustomButton.swift */,
+				6F7AE9911CE6F20400C9E6DB /* Card.swift */,
+				6F7AE9931CE6F21500C9E6DB /* Card.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6F7AE9871CE621C700C9E6DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6F260EC81CE5CBA600F9AC6B /* LoginVC.swift */,
+				6F7AE98F1CE6F08200C9E6DB /* GameVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6F7AE98C1CE64AFE00C9E6DB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6F7AE98D1CE64B0800C9E6DB /* AnimationEngine.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		A4081AE1C946C643180E78BC /* Frameworks */ = {
@@ -155,6 +197,7 @@
 				6F260ED11CE5CBA600F9AC6B /* LaunchScreen.storyboard in Resources */,
 				6F260ECE1CE5CBA600F9AC6B /* Assets.xcassets in Resources */,
 				6F260ECC1CE5CBA600F9AC6B /* Main.storyboard in Resources */,
+				6F7AE9941CE6F21500C9E6DB /* Card.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,8 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7AE98B1CE630E900C9E6DB /* CustomButton.swift in Sources */,
 				6F260EC91CE5CBA600F9AC6B /* LoginVC.swift in Sources */,
+				6F7AE9921CE6F20400C9E6DB /* Card.swift in Sources */,
 				6F260EC71CE5CBA600F9AC6B /* AppDelegate.swift in Sources */,
+				6F7AE98E1CE64B0800C9E6DB /* AnimationEngine.swift in Sources */,
+				6F7AE9901CE6F08200C9E6DB /* GameVC.swift in Sources */,
+				6F7AE9891CE621E300C9E6DB /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
